@@ -1,141 +1,429 @@
 
-        <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AfriCart Online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfroMart - Quality Products at Affordable Prices</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
         }
-        header {
-            text-align: center;
-            margin-bottom: 20px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        header img {
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .logo {
             width: 80px;
             height: 80px;
-            vertical-align: middle;
+            margin-right: 20px;
+            border-radius: 50%;
+            object-fit: cover;
         }
-        header h1 {
-            display: inline;
-            font-size: 32px;
-            margin-left: 10px;
+        h1 {
             color: #2c3e50;
+            margin: 0;
         }
-        h2 {
-            text-align: center;
-            color: #333;
+        .tagline {
+            color: #7f8c8d;
+            margin-top: 5px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         th, td {
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
+            padding: 12px;
             text-align: center;
-            padding: 10px;
-            background-color: #fff;
         }
-        img {
-            width: 100px;
-            height: 100px;
+        th {
+            background-color: #3498db;
+            color: white;
         }
-        form {
-            width: 50%;
-            margin: 0 auto;
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .product-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .form-container {
+            background-color: #ecf0f1;
             padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #ccc;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="password"],
-        select {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
+            border-radius: 8px;
         }
         .form-group {
             margin-bottom: 15px;
         }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
         .radio-group, .checkbox-group {
             display: flex;
             gap: 15px;
-            margin-top: 5px;
         }
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #27ae60;
+        .radio-option, .checkbox-option {
+            display: flex;
+            align-items: center;
+        }
+        .submit-btn {
+            background-color: #2ecc71;
             color: white;
             border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
-            margin-top: 15px;
+        }
+        .submit-btn:hover {
+            background-color: #27ae60;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="AfroMart Logo" class="logo">
+            <div>
+                <h1>AfroMart</h1>
+                <p class="tagline">Quality African Products at Affordable Prices</p>
+            </div>
+        </div>
 
-<header>
-    <img src="https://via.placeholder.com/80" alt="AfriCart Logo">
-    <h1>AfriCart Online</h1>
-</header>
+        <h2>Our Products</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Image</th>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1515442261605-65987783cb6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Coffee Beans" class="product-img"></td>
+                    <td>AFM001</td>
+                    <td>Premium Coffee Beans</td>
+                    <td>$12.99</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1594035910387-f1d6b5ec5273?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Shea Butter" class="product-img"></td>
+                    <td>AFM002</td>
+                    <td>Organic Shea Butter</td>
+                    <td>$8.50</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1583744946564-b52d01e2da64?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="African Fabric" class="product-img"></td>
+                    <td>AFM003</td>
+                    <td>African Print Fabric</td>
+                    <td>$15.75</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Wooden Bowl" class="product-img"></td>
+                    <td>AFM004</td>
+                    <td>Handcrafted Wooden Bowl</td>
+                    <td>$22.00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1597318181409-c9139b5a16df?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Hibiscus Tea" class="product-img"></td>
+                    <td>AFM005</td>
+                    <td>Organic Hibiscus Tea</td>
+                    <td>$9.99</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Bamboo Toothbrush" class="product-img"></td>
+                    <td>AFM006</td>
+                    <td>Bamboo Toothbrush</td>
+                    <td>$4.50</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Kente Scarf" class="product-img"></td>
+                    <td>AFM007</td>
+                    <td>Kente Cloth Scarf</td>
+                    <td>$18.25</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1597318181449-8f515fdd4561?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Baobab Powder" class="product-img"></td>
+                    <td>AFM008</td>
+                    <td>Baobab Powder</td>
+                    <td>$11.40</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1515442261605-65987783cb6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Coffee Beans" class="product-img"></td>
+                    <td>AFM009</td>
+                    <td>Ethiopian Coffee Blend</td>
+                    <td>$14.99</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1594035910387-f1d6b5ec5273?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Shea Butter" class="product-img"></td>
+                    <td>AFM010</td>
+                    <td>Shea Butter Lotion</td>
+                    <td>$10.50</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1583744946564-b52d01e2da64?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="African Fabric" class="product-img"></td>
+                    <td>AFM011</td>
+                    <td>Ankara Dress</td>
+                    <td>$35.00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Wooden Bowl" class="product-img"></td>
+                    <td>AFM012</td>
+                    <td>Wooden Salad Bowl</td>
+                    <td>$28.00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1597318181409-c9139b5a16df?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Hibiscus Tea" class="product-img"></td>
+                    <td>AFM013</td>
+                    <td>Hibiscus Tea Bags</td>
+                    <td>$7.99</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Bamboo Toothbrush" class="product-img"></td>
+                    <td>AFM014</td>
+                    <td>Bamboo Toothbrush Set</td>
+                    <td>$12.00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Kente Scarf" class="product-img"></td>
+                    <td>AFM015</td>
+                    <td>Kente Cloth Handbag</td>
+                    <td>$45.00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1597318181449-8f515fdd4561?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Baobab Powder" class="product-img"></td>
+                    <td>AFM016</td>
+                    <td>Baobab Energy Bars</td>
+                    <td>$6.99</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1515442261605-65987783cb6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Coffee Beans" class="product-img"></td>
+                    <td>AFM017</td>
+                    <td>Kenyan Coffee Blend</td>
+                    <td>$13.50</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1594035910387-f1d6b5ec5273?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Shea Butter" class="product-img"></td>
+                    <td>AFM018</td>
+                    <td>Shea Butter Soap</td>
+                    <td>$5.25</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1583744946564-b52d01e2da64?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="African Fabric" class="product-img"></td>
+                    <td>AFM019</td>
+                    <td>African Print Shirt</td>
+                    <td>$25.00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Wooden Bowl" class="product-img"></td>
+                    <td>AFM020</td>
+                    <td>Wooden Serving Platter</td>
+                    <td>$32.00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1597318181409-c9139b5a16df?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Hibiscus Tea" class="product-img"></td>
+                    <td>AFM021</td>
+                    <td>Hibiscus Iced Tea Mix</td>
+                    <td>$8.50</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Bamboo Toothbrush" class="product-img"></td>
+                    <td>AFM022</td>
+                    <td>Bamboo Hairbrush</td>
+                    <td>$15.00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Kente Scarf" class="product-img"></td>
+                    <td>AFM023</td>
+                    <td>Kente Cloth Wallet</td>
+                    <td>$22.00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1597318181449-8f515fdd4561?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Baobab Powder" class="product-img"></td>
+                    <td>AFM024</td>
+                    <td>Baobab Face Mask</td>
+                    <td>$9.99</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1515442261605-65987783cb6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Coffee Beans" class="product-img"></td>
+                    <td>AFM025</td>
+                    <td>Tanzanian Peaberry</td>
+                    <td>$16.99</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1594035910387-f1d6b5ec5273?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Shea Butter" class="product-img"></td>
+                    <td>AFM026</td>
+                    <td>Shea Butter Lip Balm</td>
+                    <td>$3.50</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1583744946564-b52d01e2da64?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="African Fabric" class="product-img"></td>
+                    <td>AFM027</td>
+                    <td>African Print Pants</td>
+                    <td>$28.00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Wooden Bowl" class="product-img"></td>
+                    <td>AFM028</td>
+                    <td>Wooden Spice Box</td>
+                    <td>$19.00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1597318181409-c9139b5a16df?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Hibiscus Tea" class="product-img"></td>
+                    <td>AFM029</td>
+                    <td>Hibiscus Face Toner</td>
+                    <td>$12.50</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Bamboo Toothbrush" class="product-img"></td>
+                    <td>AFM030</td>
+                    <td>Bamboo Cutlery Set</td>
+                    <td>$14.00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Kente Scarf" class="product-img"></td>
+                    <td>AFM031</td>
+                    <td>Kente Cloth Pillow</td>
+                    <td>$24.00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.unsplash.com/photo-1597318181449-8f515fdd4561?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Baobab Powder" class="product-img"></td>
+                    <td>AFM032</td>
+                    <td>Baobab Body Butter</td>
+                    <td>$13.75</td>
+                </tr>
+            </tbody>
+        </table>
 
-<h2>Our Product Catalog</h2>
-<table>
-    <!-- Table Header -->
-    <tr>
-        <th>Product Image</th>
-        <th>Product ID</th>
-        <th>Price</th>
-        <th>Product Image</th>
-        <th>Product ID</th>
-        <th>Price</th>
-        <th>Product Image</th>
-        <th>Product ID</th>
-        <th>Price</th>
-        <th>Product Image</th>
-        <th>Product ID</th>
-        <th>Price</th>
-    </tr>
-
-    <!-- Generate 8 rows x 4 products = 32 -->
-    <!-- Row Template -->
-    <!-- Each product: image, id, price (3 <td>s) -->
-    <!-- Repeat 8 rows -->
-    <!-- You can update src for real product images -->
-    <!-- ROW 1 -->
-    <tr>
-        <td><img src="https://via.placeholder.com/100" alt="Product 1"></td><td>P001</td><td>$10</td>
-        <td><img src="https://via.placeholder.com/100" alt="Product 2"></td><td>P002</td><td>$12</td>
-        <td><img src="https://via.placeholder.com/100" alt="Product 3"></td><td>P003</td><td>$15</td>
-        <td><img src="https://via.placeholder.com/100" alt="Product 4"></td><td>P004</td><td>$20</td>
-    </tr>
-    <!-- ROW 2 -->
-    <tr>
-        <td><img src="https://via.placeholder.com/100" alt="Product 5"></td><td>P005</td><td>$8</td>
-        <td><img src="https://via.placeholder.com/100" alt="Product 6"></td><td>P006</td><td>$18</td>
-        <td><img src="https://via.placeholder.com/100" alt="Product 7"></td><td>P007</td><td>$22</td>
-        <td><img src="https://via.placeholder.com/100" alt="Product 8"></td><td>P008</td><td>$25</td>
-    </tr>
-    <!-- ROW 3 -->
-    <tr>
-        <td><img src="https://via.placeholder.com/100" alt="Product 9"></td><td>P009</td><td>$30</td>
-        <td><img src="https://via.placeholder.com/100" alt="Product 10"></td><td>P010</td><td>$14</td>
-        <td><img src="https://via.placeholder.com/100" alt="Product 11"></td><td>P011</td><td>$17</td>
-        <td><img src="https://via.placeholder.com/100" alt="Product 12"></td><td>P012</td><td>$19</td>
-    </tr>
-    <!-- ROW 4 -->
-    <tr>
-        <td><img src="https://via.placeholder.com/100" alt="Product 13"></td><td>P013</td><td>$11</td>
-        <td><img src="https://via.placeholder.com/100" alt="Produ
+        <div class="form-container">
+            <h2>Customer Registration</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telephone">Telephone Number</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="male" name="gender" value="male" checked>
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="country">Country of Birth</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select a country</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="Ethiopia">Ethiopia</option>
+                        <option value="Tanzania">Tanzania</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="Angola">Angola</option>
+                        <option value="Benin">Benin</option>
+                        <option value="Botswana">Botswana</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Cameroon">Cameroon</option>
+                        <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                        <option value="DR Congo">DR Congo</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Product Categories of Interest</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="food" name="category" value="food">
+                            <label for="food">Food & Beverages</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="beauty" name="category" value="beauty">
+                            <label for="beauty">Beauty Products</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="clothing" name="category" value="clothing">
+                            <label for="clothing">Clothing & Textiles</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="handicrafts" name="category" value="handicrafts">
+                            <label for="handicrafts">Handicrafts</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="home" name="category" value="home">
+                            <label for="home">Home Decor</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="health" name="category" value="health">
+                            <label for="health">Health & Wellness</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Register Now</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
